@@ -30,7 +30,7 @@ jobs:
       github.event.inputs.direction == 'hf_to_github' ||
       github.event_name == 'schedule'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.PAT_GITHUB }}
       - uses: actions/setup-python@v5
