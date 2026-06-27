@@ -69,7 +69,7 @@ jobs:
     if: github.event_name == 'repository_dispatch'
     steps:
       - name: Dispatch to benchmarks repo
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.PAT_GITHUB }}
           repository: DrAbdulmalek/medical-ocr-benchmarks
@@ -88,7 +88,7 @@ jobs:
     if: github.event_name == 'repository_dispatch'
     steps:
       - name: Dispatch to omni-medical-suite
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.PAT_GITHUB }}
           repository: DrAbdulmalek/omni-medical-suite
