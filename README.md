@@ -1,5 +1,8 @@
 # Medical OCR Training Hub
 
+[![CI](https://github.com/DrAbdulmalek/medical-ocr-training-hub/actions/workflows/sync-and-build.yml/badge.svg)](https://github.com/DrAbdulmalek/medical-ocr-training-hub/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Welcome to the **Medical OCR Training Hub**. This repository serves as the vital strategic bridge within the `Omni-Medical-Suite` ecosystem. It automates the continuous data loop between user-assisted corrections on Hugging Face Spaces and our production-ready training datasets on GitHub.
 
 ---
@@ -97,7 +100,6 @@ cd medical-ocr-training-hub
 # Install dependencies
 pip install requests
 
-```bash
 # Run v2 pipeline (Arabic PII + Dedup + TSV — recommended)
 python src/ingestion/ingest_and_clean_v2.py
 
