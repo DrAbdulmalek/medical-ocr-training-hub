@@ -1,15 +1,22 @@
 # Medical OCR Training Hub
 
-[![CI](https://github.com/DrAbdulmalek/medical-ocr-training-hub/actions/workflows/sync-and-build.yml/badge.svg)](https://github.com/DrAbdulmalek/medical-ocr-training-hub/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Release Pipeline](https://img.shields.io/badge/pipeline-release-green)
 
-Welcome to the **Medical OCR Training Hub**. This repository serves as the vital strategic bridge within the `Omni-Medical-Suite` ecosystem. It automates the continuous data loop between user-assisted corrections on Hugging Face Spaces and our production-ready training datasets on GitHub.
+Welcome to the **Medical OCR Training Hub**. This repository serves as the vital strategic bridge within the `Omni-Medical-Suite` ecosystem. It provides a **training & release pipeline** that automates the continuous data loop between user-assisted corrections on Hugging Face Spaces and our production-ready training datasets on GitHub.
+
+---
+
+## 🚢 Release Pipeline
+
+This repository includes a fully documented release pipeline that transforms raw training data into production-ready model artifacts with automated quality gates, benchmarking, and changelog generation.
+
+📖 **See [RELEASE_PIPELINE.md](./RELEASE_PIPELINE.md) for the full pipeline documentation.**
 
 ---
 
 ## 🗺️ The Architecture & Data Loop
 
-This hub orchestrates a continuous feedback loop to ensure our Medical OCR models improve over time based on real-world corrections.
+This hub orchestrates a continuous training & release pipeline to ensure our Medical OCR models improve over time based on real-world corrections, with automated benchmarks, readiness gates, and changelog management.
 
 ```mermaid
 graph TD
@@ -100,6 +107,7 @@ cd medical-ocr-training-hub
 # Install dependencies
 pip install requests
 
+```bash
 # Run v2 pipeline (Arabic PII + Dedup + TSV — recommended)
 python src/ingestion/ingest_and_clean_v2.py
 
